@@ -5,17 +5,11 @@ import javafx.animation.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.effect.Blend;
-import javafx.scene.effect.BlendMode;
-import javafx.scene.effect.BoxBlur;
+import javafx.scene.effect.*;
 import javafx.scene.image.ImageView;
-import javafx.scene.effect.Glow;
 import javafx.scene.paint.Color;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.paint.CycleMethod;
-import javafx.scene.paint.LinearGradient;
-import javafx.scene.paint.Stop;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -187,37 +181,54 @@ public class MainAdController {
             e.printStackTrace();
         }
     }
-
     private void applyRainbowNeonEffectToText(Text text){
         Glow glow = new Glow();
-        glow.setLevel(0.7);
+        glow.setLevel(1);
 
         BoxBlur blur = new BoxBlur();
-        blur.setWidth(7);
-        blur.setHeight(7);
-        blur.setIterations(5);
+        blur.setWidth(5);
+        blur.setHeight(5);
+        blur.setIterations(3);
 
-        Blend blend = new Blend(BlendMode.MULTIPLY, glow, blur);
+        InnerShadow innerShadow = new InnerShadow();
+        innerShadow.setRadius(50.0);
+        innerShadow.setBlurType(BlurType.GAUSSIAN);
+
+        Blend blend = new Blend();
+        blend.setMode(BlendMode.MULTIPLY);
+        blend.setTopInput(glow);
+        blend.setBottomInput(blur);
 
         text.setEffect(blend);
+        innerShadow.setInput(blur);
+        blur.setInput(glow);
+
+        text.setEffect(innerShadow);
 
         Color[] colors = new Color[]{
-                Color.RED, Color.ORANGE, Color.YELLOW, Color.GREEN, Color.BLUE, Color.INDIGO, Color.VIOLET
+                Color.RED, Color.ORANGE, Color.YELLOW, Color.GREEN, Color.BLUE, Color.INDIGO, Color.VIOLET, Color.RED
         };
 
         Timeline timeline = new Timeline();
-        for (int i = 0; i < colors.length; i++){
-            Stop[] stops = new Stop[]{
-                    new Stop(0, colors[i]),
-                    new Stop(0.5, colors[(i + 1) % colors.length]),
-                    new Stop(1, colors[i])
-            };
-            LinearGradient gradient = new LinearGradient(0, 0, 1, 0, true, CycleMethod.NO_CYCLE, stops);
-            KeyValue keyValue = new KeyValue(text.fillProperty(), gradient);
-            KeyFrame keyFrame = new KeyFrame(Duration.seconds((i + 1) * 2), keyValue);
-            timeline.getKeyFrames().add(keyFrame);
+
+        for (int i = 0; i < colors.length - 1; i++)
+        {
+            final Color startColor = colors[i];
+            final Color endColor = colors[i + 1];
+            final int framesPerColor = 120;
+
+            for(int j = 0; j < framesPerColor; j++)
+            {
+                double progress = j * 1.0 / framesPerColor;
+                Color frameColor = startColor.interpolate(endColor, progress);
+
+                KeyFrame keyFrame = new KeyFrame(Duration.seconds((i + progress) * 7.0 / colors.length), event -> {
+                    innerShadow.setColor(frameColor);
+                    text.setFill(frameColor);
+                });
+                timeline.getKeyFrames().add(keyFrame);
+            }
         }
-        timeline.setAutoReverse(true);
         timeline.setCycleCount(Timeline.INDEFINITE);
         timeline.play();
     }

@@ -57,14 +57,14 @@
          </image>
       </ImageView>
       <Button fx:id="exitButton" layoutX="160.0" layoutY="7.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="120.0" text="Exit" />
-      <Text fx:id="nameGameGradient" layoutX="279.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tic-Tac-Toe">
+      <Text fx:id="nameGameGradient" layoutX="235.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tic-Tac-Toe">
          <font>
-            <Font name="Wonder Night" size="67.0" />
+            <Font name="Wonder Night" size="96.0" />
          </font>
       </Text>
-      <Text fx:id="nameGame" fill="WHITE" fontSmoothingType="LCD" layoutX="283.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tic-Tac-Toe">
+      <Text fx:id="nameGame" fill="WHITE" fontSmoothingType="LCD" layoutX="242.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tic-Tac-Toe">
          <font>
-            <Font name="Wonder Night" size="65.0" />
+            <Font name="Wonder Night" size="92.0" />
          </font>
       </Text>
    </children>
