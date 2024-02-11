@@ -1,0 +1,50 @@
+#startButton {
+    -fx-font-family: "Wonder Night";
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 34px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 1);
+}
+#playButton{
+    -fx-font-family: "Wonder Night";
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 35px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 1);
+}
+
+#player_1{
+    -fx-font-family: "Wonder Night";
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 1);
+}
+
+#player_2{
+    -fx-font-family: "Wonder Night";
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 1);
+}
+
+#exitButton{
+    -fx-font-family: "Wonder Night";
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 1);
+}
+
+
+#rootPane{
+    -fx-background-color: #150b23;
+}
+
