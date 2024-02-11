@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane fx:id="board" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vladickgeyinc.tic_tac_toe.GameMenu">
+<AnchorPane fx:id="board" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vladickgeyinc.tic_tac_toe.GameMenuController">
    <children>
-      <GridPane prefHeight="601.0" prefWidth="800.0">
+      <GridPane gridLinesVisible="true" prefHeight="601.0" prefWidth="800.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -19,6 +21,64 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
+         <children>
+            <Button fx:id="Butt0" mnemonicParsing="false" prefHeight="199.0" prefWidth="267.0" text="0">
+               <font>
+                  <Font name="DejaVu Sans Mono Bold" size="96.0" />
+               </font>
+            </Button>
+            <Button fx:id="Butt1" mnemonicParsing="false" prefHeight="202.0" prefWidth="268.0" text="1" GridPane.columnIndex="1">
+               <font>
+                  <Font size="96.0" />
+               </font>
+            </Button>
+            <Button fx:id="Butt2" mnemonicParsing="false" prefHeight="204.0" prefWidth="268.0" text="2" GridPane.columnIndex="2">
+               <font>
+                  <Font size="96.0" />
+               </font>
+            </Button>
+            <Button fx:id="Butt3" mnemonicParsing="false" prefHeight="206.0" prefWidth="280.0" text="3" GridPane.rowIndex="1">
+               <font>
+                  <Font size="96.0" />
+               </font>
+            </Button>
+            <Button fx:id="Butt4" mnemonicParsing="false" prefHeight="206.0" prefWidth="270.0" text="4" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="96.0" />
+               </font>
+            </Button>
+            <Button fx:id="Butt5" mnemonicParsing="false" prefHeight="204.0" prefWidth="273.0" text="5" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="96.0" />
+               </font>
+            </Button>
+            <Button fx:id="Butt6" mnemonicParsing="false" prefHeight="213.0" prefWidth="270.0" text="6" GridPane.rowIndex="2">
+               <font>
+                  <Font size="96.0" />
+               </font>
+            </Button>
+            <Button fx:id="Butt7" mnemonicParsing="false" prefHeight="207.0" prefWidth="298.0" text="7" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="96.0" />
+               </font>
+            </Button>
+            <Button fx:id="Butt8" mnemonicParsing="false" prefHeight="224.0" prefWidth="348.0" text="8" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="96.0" />
+               </font>
+            </Button>
+            <Button fx:id="checkWin" mnemonicParsing="false" prefHeight="48.0" prefWidth="110.0" text="просканувати перемогу">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </Button>
+            <Text fx:id="winText" fill="#6e2121" strokeType="OUTSIDE" strokeWidth="0.0" text="PEREMOGA!" visible="false" wrappingWidth="266.1367073059082" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Consolas" size="58.0" />
+               </font>
+            </Text>
+            <Text fx:id="TurnShow" strokeType="OUTSIDE" strokeWidth="0.0" text="P1's хід" wrappingWidth="65.33666801452637" GridPane.columnIndex="2" />
+         </children>
       </GridPane>
    </children>
 </AnchorPane>
