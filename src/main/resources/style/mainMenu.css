@@ -1,5 +1,9 @@
+@font-face {
+    -fx-font-family: 'Wonder Night';
+    src: url('fonts/WonderNight-MV39B.otf');
+}
 #startButton {
-    -fx-font-family: "Wonder Night";
+    -fx-font-family: 'Wonder Night';
     -fx-background-color: transparent;
     -fx-text-fill: white;
     -fx-font-size: 34px;
@@ -7,7 +11,7 @@
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 1);
 }
 #playButton{
-    -fx-font-family: "Wonder Night";
+    -fx-font-family: 'Wonder Night';
     -fx-background-color: transparent;
     -fx-text-fill: white;
     -fx-font-size: 35px;
@@ -16,7 +20,7 @@
 }
 
 #player_1{
-    -fx-font-family: "Wonder Night";
+    -fx-font-family: 'Wonder Night';
     -fx-background-color: transparent;
     -fx-text-fill: white;
     -fx-font-size: 32px;
@@ -25,7 +29,7 @@
 }
 
 #player_2{
-    -fx-font-family: "Wonder Night";
+    -fx-font-family: 'Wonder Night';
     -fx-background-color: transparent;
     -fx-text-fill: white;
     -fx-font-size: 32px;
@@ -35,15 +39,13 @@
 }
 
 #exitButton{
-    -fx-font-family: "Wonder Night";
+    -fx-font-family: 'Wonder Night';
     -fx-background-color: transparent;
     -fx-text-fill: white;
     -fx-font-size: 40px;
     -fx-font-weight: bold;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 1);
 }
-
-
 
 #rootPane{
     -fx-background-color: #150b23;
