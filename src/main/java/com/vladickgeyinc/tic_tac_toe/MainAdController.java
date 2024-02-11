@@ -201,7 +201,6 @@ public class MainAdController {
 
         text.setEffect(blend);
         innerShadow.setInput(blur);
-        blur.setInput(glow);
 
         text.setEffect(innerShadow);
 
