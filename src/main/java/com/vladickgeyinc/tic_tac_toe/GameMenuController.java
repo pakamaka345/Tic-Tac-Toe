@@ -11,7 +11,7 @@ public class GameMenuController {
 
     private boolean Turn = false;
     @FXML
-    private Button Butt1, Butt2, Butt0, Butt3, Butt4, Butt5, Butt6, Butt7, Butt8, checkWin;
+    private Button Butt1, Butt2, Butt0, Butt3, Butt4, Butt5, Butt6, Butt7, Butt8;
     @FXML
     private Text winText, TurnShow;
     public void initialize() {
@@ -24,16 +24,7 @@ public class GameMenuController {
         Butt6.setOnAction(event -> set(Butt6));
         Butt7.setOnAction(event -> set(Butt7));
         Butt8.setOnAction(event -> set(Butt8));
-        checkWin.setOnAction(event -> M_checkWin(
-                Butt0.getText(),
-                Butt1.getText(),
-                Butt2.getText(),
-                Butt3.getText(),
-                Butt4.getText(),
-                Butt5.getText(),
-                Butt6.getText(),
-                Butt7.getText(),
-                Butt8.getText() ));
+
     }
 
     public void set(Button Butt) {
@@ -47,6 +38,15 @@ public class GameMenuController {
                 TurnShow.setText("P1's хід");
             }
             Turn = !Turn;
+            M_checkWin(Butt0.getText(),
+                    Butt1.getText(),
+                    Butt2.getText(),
+                    Butt3.getText(),
+                    Butt4.getText(),
+                    Butt5.getText(),
+                    Butt6.getText(),
+                    Butt7.getText(),
+                    Butt8.getText());
         }
     }
     public void M_checkWin(String s0, String s1, String s2, String s3, String s4, String s5, String s6, String s7, String s8){

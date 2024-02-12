@@ -62,12 +62,12 @@
          </font></Button>
       <Text fx:id="nameGameGradient" layoutX="228.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tic-Tac-Toe">
          <font>
-            <Font name="Wonder Night" size="96.0" />
+            <Font name="Wonder Night" size="74.0" />
          </font>
       </Text>
       <Text fx:id="nameGame" fill="WHITE" fontSmoothingType="LCD" layoutX="235.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tic-Tac-Toe">
          <font>
-            <Font name="Wonder Night" size="92.0" />
+            <Font name="Wonder Night" size="74.0" />
          </font>
       </Text>
    </children>
