@@ -24,7 +24,7 @@
          <children>
             <Button fx:id="Butt0" mnemonicParsing="false" prefHeight="199.0" prefWidth="267.0" text="0">
                <font>
-                  <Font name="DejaVu Sans Mono Bold" size="96.0" />
+                  <Font size="96.0" />
                </font>
             </Button>
             <Button fx:id="Butt1" mnemonicParsing="false" prefHeight="202.0" prefWidth="268.0" text="1" GridPane.columnIndex="1">
@@ -72,7 +72,7 @@
                   <Font name="Consolas" size="58.0" />
                </font>
             </Text>
-            <Text fx:id="TurnShow" strokeType="OUTSIDE" strokeWidth="0.0" text="P1's хід" wrappingWidth="65.33666801452637" GridPane.columnIndex="2" />
+            <Text fx:id="TurnShow" fill = "#6e2121" strokeType="OUTSIDE" strokeWidth="0.0" text="P1's хід" wrappingWidth="65.33666801452637" GridPane.columnIndex="2" />
          </children>
       </GridPane>
    </children>

@@ -24,7 +24,6 @@ public class GameMenuController {
         Butt6.setOnAction(event -> set(Butt6));
         Butt7.setOnAction(event -> set(Butt7));
         Butt8.setOnAction(event -> set(Butt8));
-
     }
 
     public void set(Button Butt) {
@@ -50,22 +49,40 @@ public class GameMenuController {
         }
     }
     public void M_checkWin(String s0, String s1, String s2, String s3, String s4, String s5, String s6, String s7, String s8){
-        if(Objects.equals(s0, s1) && Objects.equals(s1, s2))
+        if(Objects.equals(s0, s1) && Objects.equals(s1, s2)) {
             winText.setVisible(true);
-        if(Objects.equals(s3, s4) && Objects.equals(s4, s5))
+            winText.setText("WIN FOR " + s0);
+        }
+        if(Objects.equals(s3, s4) && Objects.equals(s4, s5)) {
             winText.setVisible(true);
-        if(Objects.equals(s6, s7) && Objects.equals(s7, s8))
+            winText.setText("WIN FOR " + s3);
+        }
+        if(Objects.equals(s6, s7) && Objects.equals(s7, s8)) {
             winText.setVisible(true);
-        if(Objects.equals(s0, s3) && Objects.equals(s6, s3))
+            winText.setText("WIN FOR " + s6);
+        }
+        if(Objects.equals(s0, s3) && Objects.equals(s6, s3)) {
             winText.setVisible(true);
-        if(Objects.equals(s4, s1) && Objects.equals(s4, s7))
+            winText.setText("WIN FOR " + s0);
+        }
+        if(Objects.equals(s4, s1) && Objects.equals(s4, s7)) {
             winText.setVisible(true);
-        if(Objects.equals(s2, s5) && Objects.equals(s5, s8))
+            winText.setText("WIN FOR " + s1);
+        }
+        if(Objects.equals(s2, s5) && Objects.equals(s5, s8)) {
             winText.setVisible(true);
-        if(Objects.equals(s0, s4) && Objects.equals(s4, s8))
+            winText.setText("WIN FOR " + s2);
+        }
+        if(Objects.equals(s0, s4) && Objects.equals(s4, s8)) {
             winText.setVisible(true);
-        if(Objects.equals(s2, s4) && Objects.equals(s4, s6))
+            winText.setText("WIN FOR " + s0);
+        }
+        if(Objects.equals(s2, s4) && Objects.equals(s4, s6)) {
             winText.setVisible(true);
+            winText.setText("WIN FOR " + s2);
+        }
+
+
     }
 }
 
