@@ -58,15 +58,15 @@ public class GameMenuController {
                     Butt7.getText(),
                     Butt8.getText());
 
-        } else if(Objects.equals(Butt0.getText(), "") &&
-                  Objects.equals(Butt1.getText(), "") &&
-                  Objects.equals(Butt2.getText(), "") &&
-                  Objects.equals(Butt3.getText(), "") &&
-                  Objects.equals(Butt4.getText(), "") &&
-                  Objects.equals(Butt5.getText(), "") &&
-                  Objects.equals(Butt6.getText(), "") &&
-                  Objects.equals(Butt7.getText(), "") &&
-                  Objects.equals(Butt8.getText(), "") && !isSleeping) {
+        } else if(!Objects.equals(Butt0.getText(), "") &&
+                  !Objects.equals(Butt1.getText(), "") &&
+                  !Objects.equals(Butt2.getText(), "") &&
+                  !Objects.equals(Butt3.getText(), "") &&
+                  !Objects.equals(Butt4.getText(), "") &&
+                  !Objects.equals(Butt5.getText(), "") &&
+                  !Objects.equals(Butt6.getText(), "") &&
+                  !Objects.equals(Butt7.getText(), "") &&
+                  !Objects.equals(Butt8.getText(), "") && !isSleeping) {
             winText.setText("Draw");
             winText.setVisible(true);
             delay(5000, this::ResetGame);
