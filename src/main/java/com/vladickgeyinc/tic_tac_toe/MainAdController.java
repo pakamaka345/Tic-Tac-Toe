@@ -214,7 +214,7 @@ public class MainAdController {
         {
             final Color startColor = colors[i];
             final Color endColor = colors[i + 1];
-            final int framesPerColor = 120;
+            final int framesPerColor = 24;
 
             for(int j = 0; j < framesPerColor; j++)
             {
